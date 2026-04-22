@@ -23,7 +23,7 @@ df_boston
 # CodeGrade step2
 # Replace None with your code
 df_zero_emp = pd.read_sql("""
-    SELECT o.officeCode, o.city, COUNT(e.employeeNumber) AS num_employees
+    SELECT o.officeCode, o.city
     FROM offices o
     LEFT JOIN employees e ON o.officeCode = e.officeCode
     GROUP BY o.officeCode, o.city
